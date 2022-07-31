@@ -1,0 +1,47 @@
+body{
+
+background-image: url(images/car\ loc.jpg);
+/*background-color: green;*/
+background-size:100%;
+background-repeat: no-repeat;
+color: green;
+}
+
+#f1
+{
+position: absolute;
+top: 5%;
+left:9%;
+
+}
+#im1
+{
+z-index: 5;
+position: absolute;
+left:88%;
+}
+
+#hed1
+{
+color: green;
+/*position: absolute;*/
+/*left: 40%;
+top:10%;*/
+}
+#hed2
+{
+    color: green;
+}
+
+
+.form_box
+{
+width: 500px;
+height: 200px;
+position: absolute;
+
+top:10%;
+left:5%;
+/*background-color: rgba(0,0,0, 0.5);*/
+
+}

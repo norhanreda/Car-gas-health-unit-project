@@ -1,0 +1,21 @@
+#hed1
+{
+color: green;
+/*position: absolute;*/
+/*left: 40%;
+top:10%;*/
+}
+
+body
+{
+background-image: url(images/health.jpg);
+background-repeat: no-repeat;
+background-position-x: center;
+background-position-y: top;
+}
+#im1
+{
+    z-index: 5;
+    position: absolute;
+    left: 88%;
+}
