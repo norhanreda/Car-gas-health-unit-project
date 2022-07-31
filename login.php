@@ -24,11 +24,13 @@
     <br>
   <b> user name: </b>  <input type="text" placeholder="Enter user name here" required>
    <br>
-   <br>
-  <b> password: </b> <input type="password" placeholder="Enter password here">
+   <br> 
+  <b> password: </b> <input type="password" placeholder="Enter password here"required>
    <br>
    <br >
-   <input type="submit" value="Sign in"> <input type="button" value="change password" required>
+   <input type="submit" value="Sign in"> 
+   
+   <input type="button" value="change password" >
    <br><br>
    
    <b> don't have email? </b>

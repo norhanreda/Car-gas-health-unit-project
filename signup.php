@@ -50,6 +50,7 @@
     
     session_start();
 
+  
 $con=mysqli_connect('localhost','root','');
 
 /*if($con)
@@ -69,7 +70,8 @@ else
 echo "<br>";
 }*/
 mysqli_select_db($con,'Car gas');
-
+if(isset($_POST['user']) || isset($_POST['pass']) || isset($_POST['types']) )
+{
 $name=$_POST['user'];
 $pass=$_POST['pass'];
 $type=$_POST['types'];
@@ -118,17 +120,17 @@ else
   /*  echo '<script language="javascript">';
     echo 'alert("registration successfully ")';
     echo '</script>';*/
-    echo "registration successfully ";
-    echo "<br>";
-    echo "hello ";
+    echo '<h3 style="color:green;">registration successfully </h3>';
+   
+    echo " hello ";
     echo $name;
-    echo " you have now an emial in our system :) ";
+    echo ' <h6 style="color:green;">you have now an e-mail in our system :)</h6> ';
     
     echo "<br>";
 }
 }
 
-    
+}
     ?>
 </body>
 </html>
