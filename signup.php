@@ -7,13 +7,14 @@
     <title>Car gas</title>
     <link rel="stylesheet" href="stylesup.css">
     <link rel="icon" type="image/x-icon" href="images/car gas.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
 </head>
 <body>
  
     <img  id ="im1" src="images/car gas.jpg">
     <h1 id ="hed1"> انشاء حساب فى الوحدة الصحية لموظفى كار جاز</h1>
-
+  
    
   <!--form -->
 
@@ -26,7 +27,8 @@
    user name:  <input type="text"  name="user" placeholder="Enter user name here"  required>
    <br>
    <br>
-   password: <input type="password" name="pass" placeholder="Enter password here" required>
+   password: <input type="password" id ="pass"name="pass" placeholder="Enter password here" required>
+   <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
    <br>
    <br >
   
@@ -40,17 +42,31 @@
 <br>
 <br>
 <button type="submit"  >sign up </button>
+
    <br>
    <br>
 </form>
+<script>
+   const togglePassword = document.querySelector('#togglePassword');
+  const password = document.querySelector('#pass');
+
+  togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
+    </script>
     </div>
 
+   
 
     <?php
     
     session_start();
 
-  
+  //connect to data base
 $con=mysqli_connect('localhost','root','');
 
 /*if($con)
@@ -132,5 +148,7 @@ else
 
 }
     ?>
+
+
 </body>
 </html>
