@@ -13,7 +13,7 @@
 <body>
  
     <img  id ="im1" src="images/car gas.jpg">
-    <h1 id ="hed1"> انشاء حساب فى الوحدة الصحية لموظفى كار جاز</h1>
+    <h1 id ="hed1"> انشاء حساب فى الوحدة الصحية لموظفى كار جاس</h1>
   
    
   <!--form -->
@@ -98,17 +98,8 @@ $result=mysqli_query($con,$s);
 
 $num=mysqli_num_rows($result);
 
-/*if($name=="" || $pass=="")
-{
-    echo '<script language="javascript">';
-    echo 'alert("please enter all values !")';
-    echo '</script>';
-    echo "<br>";
 
-   
-}
-else*/ 
-{
+
 if($num==1)
 {
 
@@ -120,13 +111,6 @@ if($num==1)
     echo '<script language="javascript">';
     echo "window.location.href = 'hhttp://localhost:8888/almaza/signup.php'";
     echo '</script>';
-    
-    
-
-    
-
-    
-
     
 }
 else
@@ -144,7 +128,7 @@ else
     
     echo "<br>";
 }
-}
+
 
 }
     ?>

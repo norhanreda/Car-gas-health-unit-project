@@ -19,15 +19,15 @@
     <!--form -->
 
     <div class="form_box">
-    <form  id="f1" action="">
+    <form  id="f1" action="login.php" method="post" >
         
     
    
     <br>
-  <b> user name: </b>  <input type="text" placeholder="Enter user name here" required>
+  <b> user name: </b>  <input type="text" name="user" placeholder="Enter user name here" required>
    <br>
    <br> 
-  <b> password: </b> <input id="pass" type="password" placeholder="Enter password here"required>
+  <b> password: </b> <input id="pass"  name ="pass"type="password" placeholder="Enter password here"required>
   <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
    <br>
    <br >
@@ -53,5 +53,69 @@
 });
     </script>
     </div>
+
+<?php
+   session_start();
+
+   //connect to data base
+ $con=mysqli_connect('localhost','root','');
+ 
+//select data base
+ mysqli_select_db($con,'Car gas');
+
+ if(isset($_POST['user']) || isset($_POST['pass']) )
+ {
+ $name=$_POST['user'];
+ $pass=$_POST['pass'];
+ 
+ 
+ $s="select type from registration where username='$name' and password='$pass' ";
+ 
+ $type=mysqli_query($con,$s)->fetch_array()[0] ?? '';;
+ 
+ 
+// echo "<br>";
+// echo "<br>";
+// echo "<br>";
+// echo "<br>";
+// echo "<br>";
+// echo "<br>";
+// echo "<br>";
+// echo "<br>";
+ echo (string)$type;
+ 
+ 
+ 
+ if((string)$type=="Administrator")
+ {
+ 
+     
+  
+     echo '<script language="javascript">';
+     echo "window.location.assign('http://localhost:8888/almaza/Administrator.php'); ";
+     echo '</script>';
+    
+     
+ }
+ else if((string)$type=="Employee")
+ {
+ 
+  echo '<script language="javascript">';
+  echo "window.location.assign('http://localhost:8888/almaza/Employee.php'); ";
+  echo '</script>';
+    
+ }
+ else if((string)$type=="Doctor")
+ {
+  
+  echo '<script language="javascript">';
+  echo "window.location.assign('http://localhost:8888/almaza/Doctor.php'); ";
+  echo '</script>';
+
+
+ }
+ }
+
+?>
 </body>
 </html>
