@@ -19,7 +19,7 @@
 </head>
 <body>
     <img   style="position:absolute; left:88%;"id ="im1" src="images/car gas.jpg">
-    <h1 style="color:green; position:absolute; top:10%; left:35%;">log in as an Administrator </h1>
+    <h1 style="color:green; >log in as an Administrator </h1>
 
     <div id="d1">
   
