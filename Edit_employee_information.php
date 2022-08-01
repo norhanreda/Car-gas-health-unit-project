@@ -83,12 +83,15 @@ echo "<br>";
 
 if(isset($_POST['weight']) || isset($_POST['height'])  )
 {
+    echo "hello";
 $weight= $_POST['weight'];
 $height=$_POST['height'];
 
 $edit="update employee
 SET Weight = '$weight', Height ='$height' ;
 WHERE ID='$id';";
+echo "<br>";
+echo $edit;
 
 mysqli_query($con,$edit);
 
